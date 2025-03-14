@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(202, 149, 245);
+    background-image:url('Multiverse\ Deku.jpeg');
+    background-size: cover;
+}
+
+.play-btn {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn .bi-play-fill {
+    width: 80px;
+    height: 80px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#container {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: -100px;
+}
+
+#container .video {
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: -1000px;
+    transition: all 1s ease;
+}
+
+#container .video.showvideo {
+    top: -400px;
+}
+
+
+#container .close-btn {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    transition: all 2s ease;
+}
+
+#container .close-btn:hover {
+    color: red;
+    transform: rotateZ(360deg);
+}
+
+@media only screen and (min-width: 200px) and (max-width: 991px) {
+    #container {
+        width: 100%;
+    }
+
+    #container .video {
+        max-width: 100%;
+        height: 280px;
+    }
+
+    #container .video.showvideo {
+        top: -250px;
+    }
+
+    #container iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.custom-button {
+    position: fixed;
+    bottom: 10px; /* Atur jarak dari bawah sesuai kebutuhan */
+    left: 10px; /* Atur jarak dari kiri sesuai kebutuhan */
+  }
